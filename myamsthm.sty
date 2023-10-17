@@ -1,0 +1,36 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{myamsthm}
+
+\DeclareOption*{\PackageWarningNoLine{myamsthm}{Unknown option: `\CurrentOption'}}
+
+\ProcessOptions\relax
+
+\RequirePackage{amsthm} % \newtheorem
+
+% \theoremstyle{theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem*{proposition*}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem*{theorem*}{Theorem}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem*{definition*}{Definition}
+\newtheorem{exercise}{Exercise}
+\newtheorem*{exercise*}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{example}{Example}
+\newtheorem*{example*}{Example}
+\newtheorem{remark}{Remark}
+\newtheorem*{remark*}{Remark}
+
+\NewDocumentEnvironment{solution}{o}{%
+  \begin{proof}[Solution\IfValueT{#1}{ #1}]%
+}{%
+  \end{proof}%
+}
