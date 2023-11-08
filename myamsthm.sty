@@ -33,6 +33,11 @@
 \newtheorem{remark}{Remark}
 \newtheorem*{remark*}{Remark}
 
+\NewDocumentEnvironment{answer}{o}{%
+  \begin{proof}[Answer\IfValueT{#1}{ #1}]%
+}{%
+  \end{proof}%
+}
 \NewDocumentEnvironment{solution}{o}{%
   \begin{proof}[Solution\IfValueT{#1}{ #1}]%
 }{%
